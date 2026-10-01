@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget Carousel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="carousel-wrapper">
+        <!-- Left Arrow -->
+        <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+
+        <!-- Main Slider Container -->
+        <div class="slider-container" id="sliderContainer">
+            <div class="slider-track" id="sliderTrack">
+                
+                <!-- Widget 1: Activity -->
+                <div class="slide widget-card">
+                    <div class="activity-left">
+                        <span class="label">ACTIVITY</span>
+                        <h2>428 <span>kcal</span></h2>
+                        <p>Move goal 71%</p>
+                    </div>
+                    <div class="activity-right">
+                        <div class="ring-container">
+                            <div class="ring move-ring"></div> 
+                            <span>MOVE</span>
+                        </div>
+                        <div class="ring-container">
+                            <div class="ring exer-ring"></div>
+                            <span>EXER</span>
+                        </div>
+                        <div class="ring-container">
+                            <div class="ring stand-ring"></div>
+                            <span>STAND</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget 2: Weather -->
+                <div class="slide widget-card weather-card">
+                    <div class="weather-header">
+                        <div class="weather-info">
+                            <span class="label">BERGEN</span>
+                            <p>Partly Cloudy H:21&deg; L:12&deg;</p>
+                        </div>
+                        <div class="weather-temp">
+                            <h2>18&deg; <span class="cloud-icon">&#9729;</span></h2>
+                        </div>
+                    </div>
+                    <div class="weather-chart">
+                        <div class="bar-group"><div class="bar h-40"></div><span>Now</span></div>
+                        <div class="bar-group"><div class="bar h-60"></div><span>15</span></div>
+                        <div class="bar-group"><div class="bar h-80"></div><span>16</span></div>
+                        <div class="bar-group"><div class="bar h-70"></div><span>17</span></div>
+                        <div class="bar-group"><div class="bar h-50"></div><span>18</span></div>
+                        <div class="bar-group"><div class="bar h-30"></div><span>19</span></div>
+                    </div>
+                </div>
+
+                <!-- Widget 3: Music Player -->
+                <div class="slide widget-card music-card">
+                    <div class="album-art"></div>
+                    <div class="music-info">
+                        <div class="track-details">
+                            <span class="label">NOW PLAYING</span>
+                            <h3>Midnight City</h3>
+                            <p>M83</p>
+                        </div>
+                        <div class="music-progress">
+                            <div class="progress-bar"><div class="progress-fill"></div></div>
+                            <div class="time-labels"><span>1:24</span><span>4:03</span></div>
+                        </div>
+                        <div class="music-controls">
+                            <button class="ctrl-btn">&#9664;&#9664;</button>
+                            <button class="ctrl-btn play-btn" id="playBtn">&#9654;</button>
+                            <button class="ctrl-btn">&#9654;&#9654;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget 4: Real-Time Clock & Date -->
+                <div class="slide widget-card clock-card">
+                    <div class="clock-display">
+                        <h1 id="timeDisplay">--:--</h1>
+                        <span id="ampmDisplay">--</span>
+                    </div>
+                    <div class="date-display">
+                        <p id="dateDisplay">Loading date...</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+    </div>
+
+    <!-- Pagination Dots (Updated for 4 widgets) -->
+    <div class="pagination">
+        <div class="dot active" data-index="0"></div>
+        <div class="dot" data-index="1"></div>
+        <div class="dot" data-index="2"></div>
+        <div class="dot" data-index="3"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
